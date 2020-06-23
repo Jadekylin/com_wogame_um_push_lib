@@ -28,6 +28,7 @@ public class UMPushService {
         //获取消息推送代理示例
         PushAgent mPushAgent = PushAgent.getInstance(context);
         mPushAgent.setResourcePackageName(AppInfoUtil.mPackageName);
+        GMDebug.LogD(" UMPushService 注册成功：initApplication：-------->  ");
         //注册推送服务，每次调用register方法都会回调该接口
         mPushAgent.register(new IUmengRegisterCallback() {
             @Override
